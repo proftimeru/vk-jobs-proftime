@@ -1,19 +1,17 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-import { View, Panel, ConfigProvider, Group, Root, PanelHeaderSimple, PanelHeaderClose, CellButton, PanelHeaderBack, PanelHeaderButton, PanelHeaderSubmit, PanelHeaderContent, Avatar, Tabs, Search, TabsItem } from '@vkontakte/vkui';
-import Icon28PictureOutline from '@vkontakte/icons/dist/28/picture_outline';
-import Icon28SettingsOutline from '@vkontakte/icons/dist/28/settings_outline';
-import Icon28Notifications from '@vkontakte/icons/dist/28/notifications';
-import vkBridge from '@vkontakte/vk-bridge';
+import { View, Panel, PanelHeader, Cell, Header, List, ANDROID, Group,  PanelHeaderButton } from '@vkontakte/vkui';
+import Icon24Back from '@vkontakte/icons/dist/24/back';
+import Icon28ChevronBack from '@vkontakte/icons/dist/28/chevron_back';
+import Icon28ServicesOutline from '@vkontakte/icons/dist/28/services_outline';
+import Icon28InfoOutline from '@vkontakte/icons/dist/28/info_outline';
 import '@vkontakte/vkui/dist/vkui.css';
 
 
-
 class Example extends React.Component {
-
-    constructor() {
-      this.state = {
-        activePanel: 'list'
+	constructor(props) {
+		super(props);
+		this.state = {
+			activePanel: 'list'
       };
     }
 
@@ -22,14 +20,14 @@ class Example extends React.Component {
         <View activePanel={this.state.activePanel}>
           <Panel id="list">
             <PanelHeader>
-              Cell
+              Вакансии
             </PanelHeader>
             
-            <Group header={<Header mode="secondary">Переходы</Header>}>
+            <Group header={<Header mode="secondary">Разделы</Header>}>
               <List>
-                <Cell expandable onClick={() => this.setState({ activePanel: 'nothing' })}>Учетная запись</Cell>
-                <Cell expandable onClick={() => this.setState({ activePanel: 'nothing' })}>Основные</Cell>
-                <Cell expandable onClick={() => this.setState({ activePanel: 'nothing' })}>Приватность</Cell>
+                <Cell expandable onClick={() => this.setState({ activePanel: 'nothing' })}>Разделы 1</Cell>
+                <Cell expandable onClick={() => this.setState({ activePanel: 'nothing' })}>Разделы 2</Cell>
+                <Cell expandable onClick={() => this.setState({ activePanel: 'nothing' })}>Разделы 3</Cell>
               </List>
             </Group>
             
@@ -79,4 +77,6 @@ class Example extends React.Component {
     }
   }
 
-ReactDOM.render(<Example />, document.getElementById('root'));
+
+
+export default Example;

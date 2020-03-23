@@ -1,9 +1,8 @@
- {
-  "name": "vk-jobs-proftime",
-  "version": "0.1.0",
+{
+  "name": "vk-proftime",
+  "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "homepage": "https://proftimeru.github.io/vk-jobs-proftime/",
   "scripts": {
     "start": "cross-env PORT=10888 HTTPS=true react-scripts start",
     "build": "react-scripts build",
